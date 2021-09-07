@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<LangVersion>preview</LangVersion>
+		<NoWarn>CS0105</NoWarn>
+		<RestoreSources>
+			$(RestoreSources);
+			https://api.nuget.org/v3/index.json;
+			https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet-tools/nuget/v3/index.json;
+			https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet6/nuget/v3/index.json
+		</RestoreSources>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="6.0.0-preview.7.21377.19" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Console" Version="6.0.0-preview.7.21377.19" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.1" />
+	</ItemGroup>
+	<ItemGroup>
+
+		<ProjectReference Include="..\MinimalApiCore\MinimalApiCore.csproj" />
+
+		<!-- Add this as a new ItemGroup, replacing paths and names appropriately -->
+	</ItemGroup>
+</Project>

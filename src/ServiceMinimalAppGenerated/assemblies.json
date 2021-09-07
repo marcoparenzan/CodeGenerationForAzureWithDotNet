@@ -1,0 +1,14 @@
+[
+  {
+    "path": "C:\\Repos-Experiments\\ContractGenerations\\src\\EasyLifeLogic\\bin\\Debug\\netstandard2.0\\EasyLifeLogic.dll"
+  },
+  {
+    "path": "C:\\Repos-Experiments\\ContractGenerations\\src\\EasyLifeService\\bin\\Debug\\netstandard2.0\\EasyLifeService.dll",
+    "services": [
+      {
+        "typeName": "EasyLifeService.IProductionLogManagerService",
+        "serviceName": "ProductionLog"
+      }
+    ]
+  }
+]

@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	  <TargetFramework>net5.0</TargetFramework>
+	  <Nullable>enable</Nullable>
+	  <LangVersion>preview</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+	  <PackageReference Include="Bogus" Version="33.1.1" />
+  </ItemGroup>
+	<ItemGroup>
+	<ProjectReference Include="..\MinimalApiGenerator\MinimalApiGenerator.csproj" />
+	<ProjectReference Include="..\MinimalApiGenerator\MinimalApiGenerator.csproj" ReferenceOutputAssembly="false" OutputItemType="Analyzer" />
+	<ProjectReference Include="..\Contract\Contract.csproj" />
+  </ItemGroup>
+
+</Project>
