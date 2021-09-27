@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.0.31612.314
+VisualStudioVersion = 17.0.31717.71
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Contract", "Contract\Contract.csproj", "{81B5A4D9-83C8-4769-8FB9-05F35A7D3EA4}"
 EndProject
@@ -34,6 +34,14 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MinimalApiCore", "MinimalApiCore\MinimalApiCore.csproj", "{8B964369-82F5-464C-B29D-B6F3F9020BEC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. A simple Sample", "2. A simple Sample", "{36511AF8-429D-424D-9667-6FE71CA125E0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "7. Notebooks", "7. Notebooks", "{379C78FB-12E7-4E8B-B57E-649BBDC1C52F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSVExtension", "CSVExtension\CSVExtension.csproj", "{62E69FC7-350E-4969-AA63-C3E5E38C03C3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "6. Swagger Proxy", "6. Swagger Proxy", "{37687D7E-416F-4514-A0C1-9BE36B8CB918}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "8. IoT Plug and Play", "8. IoT Plug and Play", "{FD7D7E1B-513E-4B54-9DA2-E3C87DEAA0E4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +89,10 @@ Global
 		{8B964369-82F5-464C-B29D-B6F3F9020BEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B964369-82F5-464C-B29D-B6F3F9020BEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B964369-82F5-464C-B29D-B6F3F9020BEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62E69FC7-350E-4969-AA63-C3E5E38C03C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62E69FC7-350E-4969-AA63-C3E5E38C03C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62E69FC7-350E-4969-AA63-C3E5E38C03C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62E69FC7-350E-4969-AA63-C3E5E38C03C3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -96,6 +108,7 @@ Global
 		{C77D7041-962A-4962-9B0B-A4A4D4ACE48B} = {1C33A407-8FEE-45DC-BFF4-5E483F15FF7E}
 		{A583A68A-BC9A-48AE-98D2-940BEC9872A9} = {1C33A407-8FEE-45DC-BFF4-5E483F15FF7E}
 		{8B964369-82F5-464C-B29D-B6F3F9020BEC} = {1C33A407-8FEE-45DC-BFF4-5E483F15FF7E}
+		{62E69FC7-350E-4969-AA63-C3E5E38C03C3} = {379C78FB-12E7-4E8B-B57E-649BBDC1C52F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D932BA35-B951-4FEB-A2BE-B28F0E789B1C}

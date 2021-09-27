@@ -4,7 +4,12 @@ using Microsoft.CodeAnalysis.CSharp.Syntax;
 using System;
 using System.IO;
 
-var tree = CSharpSyntaxTree.ParseText(File.ReadAllText(@"..\..\..\..\Contract\IService.cs"));
+var text = File.ReadAllText(@"..\..\..\..\Contract\IService.cs");
+text = @"
+   var xxx = new List<string>();
+";
+
+var tree = CSharpSyntaxTree.ParseText(text);
 //var tree = CSharpSyntaxTree.ParseText(File.ReadAllText(@"..\..\..\..\ServiceHostApp\Service.DoSomething.cs"));
 
 Console.WriteLine(tree.ToString());

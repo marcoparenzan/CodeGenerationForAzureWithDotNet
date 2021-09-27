@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>net5.0</TargetFramework>    
+    <IncludeBuildOutput>true</IncludeBuildOutput>
+    <IsPackable>true</IsPackable>
+    <PackageDescription>Read CSV</PackageDescription>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="bin\**" />
+    <EmbeddedResource Remove="bin\**" />
+    <None Remove="bin\**" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="microsoft.dotnet.interactive" Version="1.0.0-beta.20574.9" />
+    <PackageReference Include="microsoft.dotnet.interactive.csharp" Version="1.0.0-beta.20574.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="$(OutputPath)/CSVExtension.dll" Pack="true" PackagePath="interactive-extensions/dotnet" />
+  </ItemGroup>
+  
+</Project>
