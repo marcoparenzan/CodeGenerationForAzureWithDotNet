@@ -1,0 +1,254 @@
+[
+  {
+    "@id": "dtmi:solarPanelMonitoring:Solar_Panel_v1_1_21a;1",
+    "@type": "Interface",
+    "contents": [],
+    "displayName": {
+      "en": "Solar Panel v1.1"
+    },
+    "extends": [
+      "dtmi:solarPanelMonitoring:Solar_Panel_v1_1_7k6;1"
+    ],
+    "@context": [
+      "dtmi:iotcentral:context;2",
+      "dtmi:dtdl:context;2"
+    ]
+  },
+  {
+    "@context": [
+      "dtmi:iotcentral:context;2",
+      "dtmi:dtdl:context;2"
+    ],
+    "@id": "dtmi:solarPanelMonitoring:Solar_Panel_v1_1_7k6;1",
+    "@type": [
+      "Interface",
+      "NamedInterface"
+    ],
+    "contents": [
+      {
+        "@id": "dtmi:solarPanelMonitoring:Solar_Panel_v1_1_7k6:PanelId;1",
+        "@type": "Property",
+        "displayName": {
+          "en": "PanelId"
+        },
+        "name": "PanelId",
+        "schema": "string",
+        "writable": true
+      },
+      {
+        "@id": "dtmi:solarPanelMonitoring:Solar_Panel_v1_1_7k6:PowerAmountKW;1",
+        "@type": "Telemetry",
+        "displayName": {
+          "en": "Power Reading"
+        },
+        "name": "PowerAmountKW",
+        "schema": "double"
+      },
+      {
+        "@id": "dtmi:solarPanelMonitoring:Solar_Panel_v1_1_7k6:PeakPower;1",
+        "@type": "Property",
+        "displayName": {
+          "en": "Peak Power"
+        },
+        "name": "PeakPower",
+        "schema": "double",
+        "writable": true
+      },
+      {
+        "@id": "dtmi:solarPanelMonitoring:Solar_Panel_v1_1_7k6:NominalVoltage;1",
+        "@type": "Telemetry",
+        "displayName": {
+          "en": "Nominal Voltage"
+        },
+        "name": "NominalVoltage",
+        "schema": "double"
+      },
+      {
+        "@id": "dtmi:solarPanelMonitoring:Solar_Panel_v1_1_7k6:Efficiency;1",
+        "@type": "Telemetry",
+        "displayName": {
+          "en": "Efficiency"
+        },
+        "name": "Efficiency",
+        "schema": "double"
+      },
+      {
+        "@id": "dtmi:solarPanelMonitoring:Solar_Panel_v1_1_7k6:Type;1",
+        "@type": "Property",
+        "displayName": {
+          "en": "Type"
+        },
+        "name": "Type",
+        "schema": {
+          "@id": "dtmi:solarPanelMonitoring:Solar_Panel_v1_1_7k6:Type:schema;1",
+          "@type": "Enum",
+          "displayName": {
+            "en": "Enum"
+          },
+          "enumValues": [
+            {
+              "@id": "dtmi:solarPanelMonitoring:Solar_Panel_v1_1_7k6:Type:schema:Monocrystalline;1",
+              "displayName": {
+                "en": "Monocrystalline "
+              },
+              "enumValue": "1",
+              "name": "Monocrystalline"
+            },
+            {
+              "@id": "dtmi:solarPanelMonitoring:Solar_Panel_v1_1_7k6:Type:schema:Polycrystalline;1",
+              "displayName": {
+                "en": "Polycrystalline"
+              },
+              "enumValue": "2",
+              "name": "Polycrystalline"
+            },
+            {
+              "@id": "dtmi:solarPanelMonitoring:Solar_Panel_v1_1_7k6:Type:schema:ThinFilm;1",
+              "displayName": {
+                "en": "Thin-Film"
+              },
+              "enumValue": "3",
+              "name": "ThinFilm"
+            }
+          ],
+          "valueSchema": "string"
+        },
+        "writable": false
+      },
+      {
+        "@id": "dtmi:solarPanelMonitoring:Solar_Panel_v1_1_7k6:EnergyAmountkWh;1",
+        "@type": "Telemetry",
+        "displayName": {
+          "en": "Energy Reading"
+        },
+        "name": "EnergyAmountkWh",
+        "schema": "double"
+      },
+      {
+        "@id": "dtmi:solarPanelMonitoring:Solar_Panel_v1_1_7k6:PanelStatus;1",
+        "@type": [
+          "Telemetry",
+          "State"
+        ],
+        "displayName": {
+          "en": "Panel Status"
+        },
+        "name": "PanelStatus",
+        "schema": {
+          "@id": "dtmi:solarPanelMonitoring:Solar_Panel_v1_1_7k6:PanelStatus:schema;1",
+          "@type": "Enum",
+          "enumValues": [
+            {
+              "@id": "dtmi:solarPanelMonitoring:Solar_Panel_v1_1_7k6:PanelStatus:schema:Active;1",
+              "displayName": {
+                "en": "Active"
+              },
+              "enumValue": 1,
+              "name": "Active"
+            },
+            {
+              "@id": "dtmi:solarPanelMonitoring:Solar_Panel_v1_1_7k6:PanelStatus:schema:Inactive;1",
+              "displayName": {
+                "en": "Inactive"
+              },
+              "enumValue": 2,
+              "name": "Inactive"
+            },
+            {
+              "@id": "dtmi:solarPanelMonitoring:Solar_Panel_v1_1_7k6:PanelStatus:schema:OutOfOrder;1",
+              "displayName": {
+                "en": "Out of Order"
+              },
+              "enumValue": 3,
+              "name": "OutOfOrder"
+            }
+          ],
+          "valueSchema": "integer"
+        }
+      },
+      {
+        "@id": "dtmi:solarPanelMonitoring:Solar_Panel_v1_1_7k6:MaxVoltage;1",
+        "@type": "Property",
+        "displayName": {
+          "en": "Max Voltage"
+        },
+        "name": "MaxVoltage",
+        "schema": "double",
+        "writable": true
+      },
+      {
+        "@id": "dtmi:solarPanelMonitoring:Solar_Panel_v1_1_7k6:Temperature;1",
+        "@type": [
+          "Telemetry",
+          "Temperature"
+        ],
+        "displayName": {
+          "en": "Temperature"
+        },
+        "name": "Temperature",
+        "schema": "double"
+      },
+      {
+        "@id": "dtmi:solarPanelMonitoring:Solar_Panel_v1_1_7k6:Activate;1",
+        "@type": "Command",
+        "displayName": {
+          "en": "Activate"
+        },
+        "name": "Activate"
+      },
+      {
+        "@id": "dtmi:solarPanelMonitoring:Solar_Panel_v1_1_7k6:Deactivate;1",
+        "@type": "Command",
+        "displayName": {
+          "en": "Deactivate"
+        },
+        "name": "Deactivate"
+      },
+      {
+        "@id": "dtmi:solarPanelMonitoring:Solar_Panel_v1_1_7k6:UpdateVersion;1",
+        "@type": "Command",
+        "displayName": {
+          "en": "Update Version"
+        },
+        "name": "UpdateVersion"
+      },
+      {
+        "@id": "dtmi:solarPanelMonitoring:Solar_Panel_v1_1_7k6:InstalledDate;1",
+        "@type": "Property",
+        "displayName": {
+          "en": "Installed Date"
+        },
+        "name": "InstalledDate",
+        "schema": "dateTime",
+        "writable": true
+      },
+      {
+        "@id": "dtmi:solarPanelMonitoring:Solar_Panel_v1_1_7k6:InstalledLocation;1",
+        "@type": [
+          "Property",
+          "Location"
+        ],
+        "displayName": {
+          "en": "Installed Location"
+        },
+        "name": "InstalledLocation",
+        "schema": "geopoint",
+        "writable": true
+      },
+      {
+        "@id": "dtmi:solarPanelMonitoring:Solar_Panel_v1_1_7k6:FirmwareVersion;1",
+        "@type": "Property",
+        "displayName": {
+          "en": "Firmware Version"
+        },
+        "name": "FirmwareVersion",
+        "schema": "string",
+        "writable": true
+      }
+    ],
+    "displayName": {
+      "en": "Interface"
+    },
+    "name": "Solar_Panel_v1_1_7k6"
+  }
+]
