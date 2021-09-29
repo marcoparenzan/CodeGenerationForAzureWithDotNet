@@ -6,7 +6,8 @@ using System.IO;
 
 var text = File.ReadAllText(@"..\..\..\..\Contract\IService.cs");
 text = @"
-   var xxx = new List<string>();
+   [Description("")]
+    public string XXX {get; set;}
 ";
 
 var tree = CSharpSyntaxTree.ParseText(text);

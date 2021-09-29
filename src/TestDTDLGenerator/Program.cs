@@ -20,11 +20,29 @@ var itemClassDecl = SyntaxFactory.ClassDeclaration($"{name}")
     .AddMembers(
         entities.Skip(1).Select(xx =>
             SyntaxFactory.PropertyDeclaration(SyntaxFactory.PredefinedType(SyntaxFactory.Token(SyntaxKind.StringKeyword)), xx.Value.Id.ToString())
-            .WithModifiers(SyntaxFactory.TokenList().Add(SyntaxFactory.Token(SyntaxKind.PublicKeyword)))
-            .WithAccessorList(SyntaxFactory.AccessorList().AddAccessors(
-            SyntaxFactory.AccessorDeclaration(SyntaxKind.GetAccessorDeclaration).WithSemicolonToken(SyntaxFactory.Token(SyntaxKind.SemicolonToken)),
-            SyntaxFactory.AccessorDeclaration(SyntaxKind.SetAccessorDeclaration).WithSemicolonToken(SyntaxFactory.Token(SyntaxKind.SemicolonToken))
-        ))
+            .AddAttributeLists(
+                SyntaxFactory.AttributeList()
+                .AddAttributes(
+                    SyntaxFactory.Attribute(
+                        SyntaxFactory.IdentifierName("DescriptionAttribute")
+                    )
+                    .AddArgumentListArguments(
+                        SyntaxFactory.AttributeArgument(
+                            SyntaxFactory.LiteralExpression(
+                                SyntaxKind.StringLiteralExpression,
+                                SyntaxFactory.Literal(xx.Value.Id.ToString())
+                            )
+                        )
+                    )
+                )
+            )
+            .AddModifiers(
+                SyntaxFactory.Token(SyntaxKind.PublicKeyword)
+            )
+            .AddAccessorListAccessors(
+                SyntaxFactory.AccessorDeclaration(SyntaxKind.GetAccessorDeclaration).WithSemicolonToken(SyntaxFactory.Token(SyntaxKind.SemicolonToken)),
+                SyntaxFactory.AccessorDeclaration(SyntaxKind.SetAccessorDeclaration).WithSemicolonToken(SyntaxFactory.Token(SyntaxKind.SemicolonToken))
+            )
         ).ToArray()
     )
 ;
