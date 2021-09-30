@@ -10,9 +10,9 @@
 	  <PackageReference Include="Bogus" Version="33.1.1" />
   </ItemGroup>
 	<ItemGroup>
+	<ProjectReference Include="..\Contract\Contract.csproj" />
 	<ProjectReference Include="..\MinimalApiGenerator\MinimalApiGenerator.csproj" />
 	<ProjectReference Include="..\MinimalApiGenerator\MinimalApiGenerator.csproj" ReferenceOutputAssembly="false" OutputItemType="Analyzer" />
-	<ProjectReference Include="..\Contract\Contract.csproj" />
   </ItemGroup>
 
 </Project>

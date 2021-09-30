@@ -14,6 +14,12 @@
   <ItemGroup>
     <AdditionalFiles Include="Solar Panel v1.1.json" />
   </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Azure.Devices.Client" Version="1.38.0" />
+    <PackageReference Include="Microsoft.Azure.Devices.Provisioning.Client" Version="1.18.0" />
+    <PackageReference Include="Microsoft.Azure.Devices.Provisioning.Transport.Mqtt" Version="1.16.0" />
+  </ItemGroup>
   
   <ItemGroup>
     <ProjectReference Include="..\DevicePnPGenerator\DevicePnPGenerator.csproj" />
