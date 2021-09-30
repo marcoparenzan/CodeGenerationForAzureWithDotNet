@@ -11,15 +11,17 @@ var jsonDoc = JsonDocument.Parse(text);
 var xx = jsonDoc.RootElement.EnumerateArray().Select(xx => xx.ToString()).ToArray();
 var entities = await parser.ParseAsync(xx);
 
-var name = entities.Values.First().DisplayName;
+var interfaceInfo = entities.Where(xx => xx.Value is DTInterfaceInfo).Select(xx => xx.Value).Cast<DTInterfaceInfo>().ToArray();
+var name = interfaceInfo.Last().Id.Labels.Last();
+var temetryInfos = entities.Where(xx => xx.Value is DTTelemetryInfo).Select(xx => xx.Value).Cast<DTTelemetryInfo>().ToArray();
 
 var itemClassDecl = SyntaxFactory.ClassDeclaration($"{name}")
     .WithModifiers(SyntaxFactory.TokenList()
         .Add(SyntaxFactory.Token(SyntaxKind.PublicKeyword))
     )
     .AddMembers(
-        entities.Skip(1).Select(xx =>
-            SyntaxFactory.PropertyDeclaration(SyntaxFactory.PredefinedType(SyntaxFactory.Token(SyntaxKind.StringKeyword)), xx.Value.Id.ToString())
+        temetryInfos.Select(xx =>
+            SyntaxFactory.PropertyDeclaration(SyntaxFactory.ParseTypeName(xx.Schema.EntityKind.ToString()), xx.Name)
             .AddAttributeLists(
                 SyntaxFactory.AttributeList()
                 .AddAttributes(
@@ -30,7 +32,7 @@ var itemClassDecl = SyntaxFactory.ClassDeclaration($"{name}")
                         SyntaxFactory.AttributeArgument(
                             SyntaxFactory.LiteralExpression(
                                 SyntaxKind.StringLiteralExpression,
-                                SyntaxFactory.Literal(xx.Value.Id.ToString())
+                                SyntaxFactory.Literal(xx.Id.ToString())
                             )
                         )
                     )

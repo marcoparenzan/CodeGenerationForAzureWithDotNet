@@ -15,15 +15,8 @@
     ]
   },
   {
-    "@context": [
-      "dtmi:iotcentral:context;2",
-      "dtmi:dtdl:context;2"
-    ],
     "@id": "dtmi:solarPanelMonitoring:Solar_Panel_v1_1_7k6;1",
-    "@type": [
-      "Interface",
-      "NamedInterface"
-    ],
+    "@type": "Interface",
     "contents": [
       {
         "@id": "dtmi:solarPanelMonitoring:Solar_Panel_v1_1_7k6:PanelId;1",
@@ -168,12 +161,16 @@
       },
       {
         "@id": "dtmi:solarPanelMonitoring:Solar_Panel_v1_1_7k6:MaxVoltage;1",
-        "@type": "Property",
+        "@type": [
+          "Property",
+          "Voltage"
+        ],
         "displayName": {
           "en": "Max Voltage"
         },
         "name": "MaxVoltage",
         "schema": "double",
+        "unit": "volt",
         "writable": true
       },
       {
@@ -186,7 +183,8 @@
           "en": "Temperature"
         },
         "name": "Temperature",
-        "schema": "double"
+        "schema": "double",
+        "unit": "degreeCelsius"
       },
       {
         "@id": "dtmi:solarPanelMonitoring:Solar_Panel_v1_1_7k6:Activate;1",
@@ -249,6 +247,8 @@
     "displayName": {
       "en": "Interface"
     },
-    "name": "Solar_Panel_v1_1_7k6"
-  }
-]
+    "@context": [
+      "dtmi:iotcentral:context;2",
+      "dtmi:dtdl:context;2"
+    ]
+  }]
